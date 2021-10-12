@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fpga_vdf_discriminant.cpp" path="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant.cpp"/>
+    <originFiles name="fpga_vdf_discriminant.h" path="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant.h"/>
+  </source>
+  <testbench>
+    <originFiles name="fpga_vdf_discriminant-tb.cpp" path="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant-tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
