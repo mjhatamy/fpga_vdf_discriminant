@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/fpga_vdf_discriminant.dir/fpga_vdf_discriminant-tb.cpp.o CMakeFiles/fpga_vdf_discriminant.dir/fpga_vdf_discriminant.cpp.o CMakeFiles/fpga_vdf_discriminant.dir/VDFTypes.cpp.o CMakeFiles/fpga_vdf_discriminant.dir/Utils.cpp.o  -o fpga_vdf_discriminant -rdynamic /usr/lib/x86_64-linux-gnu/libgmp.so 
