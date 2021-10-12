@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/fpga_vdf_discriminant.iml" filepath="$PROJECT_DIR$/.idea/fpga_vdf_discriminant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fpga_vdf_discriminant2.iml" filepath="$PROJECT_DIR$/.idea/fpga_vdf_discriminant2.iml" />
     </modules>
   </component>
 </project>

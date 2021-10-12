@@ -1,4 +1,7 @@
-/home/mjhatamy/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant
+/home/mjhatamy/Applications/Xilinx/Vitis/2021.1/tps/lnx64/cmake-3.3.2/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/tmp.zjHDLLHpAj
+GMP_INCLUDES=/usr/include/x86_64-linux-gnu
+-- -----> GMP_LIBRARIES: /usr/lib/x86_64-linux-gnu/libgmp.so
+-- Found GMP: /usr/include/x86_64-linux-gnu (Required is at least version "5.1.0") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug
+-- Build files have been written to: /tmp/tmp.zjHDLLHpAj/cmake-build-debug

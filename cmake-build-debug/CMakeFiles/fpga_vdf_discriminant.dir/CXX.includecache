@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -270,23 +270,39 @@ climits
 gmp.h
 -
 
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/Utils.h
-VDFTypes.h
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/VDFTypes.h
+/tmp/tmp.zjHDLLHpAj/Utils.cpp
+Utils.h
+/tmp/tmp.zjHDLLHpAj/Utils.h
+regex
+-
+gmp.h
+-
 
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/VDFTypes.h
+/tmp/tmp.zjHDLLHpAj/Utils.h
+VDFTypes.h
+/tmp/tmp.zjHDLLHpAj/VDFTypes.h
+
+/tmp/tmp.zjHDLLHpAj/VDFTypes.cpp
+VDFTypes.h
+/tmp/tmp.zjHDLLHpAj/VDFTypes.h
+
+/tmp/tmp.zjHDLLHpAj/VDFTypes.h
 ap_int.h
 -
 
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant-tb.cpp
+/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant-tb.cpp
 fpga_vdf_discriminant.h
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant.h
+/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant.h
 regex
 -
 
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant.h
+/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant.cpp
+fpga_vdf_discriminant.h
+/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant.h
+
+/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant.h
 VDFTypes.h
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/VDFTypes.h
+/tmp/tmp.zjHDLLHpAj/VDFTypes.h
 Utils.h
-/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/Utils.h
+/tmp/tmp.zjHDLLHpAj/Utils.h
 

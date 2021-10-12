@@ -18,6 +18,8 @@ namespace FpgaVdf {
 
 #ifndef __SYNTHESIS__
         static void parse(const char * hashCharArray, DATA_TYPE outData[DATA_ARRAY_LEN]);
+        static void sumValidateByGMP(int offset, DATA_TYPE *fpgaResult, DATA_TYPE *lVal, DATA_TYPE *rVal, const ap_int<2>& carry);
+        static void sumValidateByGMP(const std::string& lValStr, std::string rValStr, DATA_TYPE *fpgaResult);
 #endif
     };
 }

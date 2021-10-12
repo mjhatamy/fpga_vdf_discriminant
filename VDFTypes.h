@@ -10,7 +10,7 @@
 
 namespace FpgaVdf {
 #define DATA_ARRAY_LEN 4
-#define DATA_LEN 1026
+#define DATA_LEN 1025
 typedef ap_int<DATA_LEN> DATA_TYPE;
 typedef ap_int<DATA_LEN + 1> DATA_TYPE_SUM;
 

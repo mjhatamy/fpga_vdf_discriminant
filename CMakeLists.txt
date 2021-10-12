@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.3.2)
 
 set(PROJECT_NAME "fpga_vdf_discriminant")
 project(${PROJECT_NAME} LANGUAGES CXX C)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(XILINX_PATH "/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1")
@@ -14,7 +14,7 @@ set(CMAKE_MODULE_PATH
         ${CMAKE_MODULE_PATH}
         )
 
-#find_package(GMP REQUIRED)
+find_package(GMP REQUIRED)
 #find_package(GMPXX REQUIRED)
 #find_package(FLINT REQUIRED)
 #find_package(MPFR REQUIRED)
@@ -43,5 +43,6 @@ add_executable(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
         ${GMP_LIBRARIES}
-        ${GMPXX_LIBRARIES})
+        ${GMPXX_LIBRARIES}
+        )
 

@@ -1,125 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
-	<FileVersion major="1" minor="6"/>
-	<Project>
-		<Option title="fpga_vdf_discriminant"/>
-		<Option makefile_is_custom="1"/>
-		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;"/>
-		<Build>
-			<Target title="all">
-				<Option working_dir="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="fpga_vdf_discriminant">
-				<Option output="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/fpga_vdf_discriminant" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add directory="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-					<Add directory="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant"/>
-					<Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include"/>
-					<Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/app_sync"/>
-					<Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/etc"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/llvm-11/lib/clang/11.0.0/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 fpga_vdf_discriminant"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="fpga_vdf_discriminant/fast">
-				<Option output="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/fpga_vdf_discriminant" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add directory="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug"/>
-					<Add directory="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant"/>
-					<Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include"/>
-					<Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/app_sync"/>
-					<Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/etc"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/llvm-11/lib/clang/11.0.0/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 fpga_vdf_discriminant/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-		</Build>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/Utils.cpp">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/Utils.h">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/VDFTypes.cpp">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/VDFTypes.h">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant-tb.cpp">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant.cpp">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/fpga_vdf_discriminant.h">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/usr/include">
-			<Option target="fpga_vdf_discriminant"/>
-		</Unit>
-		<Unit filename="/home/mjhatamy/workspace/vdf_proj/fpga/fpga_vdf_discriminant/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-	</Project>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="fpga_vdf_discriminant" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\cmake\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="fpga_vdf_discriminant">
+         <Option output="/tmp/tmp.zjHDLLHpAj/cmake-build-debug/fpga_vdf_discriminant" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include" />
+            <Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/app_sync" />
+            <Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/etc" />
+            <Add directory="/tmp/tmp.zjHDLLHpAj" />
+            <Add directory="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+            <Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9" />
+            <Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward" />
+            <Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include" />
+            <Add directory="/usr/lib/llvm-11/lib/clang/11.0.0/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 fpga_vdf_discriminant" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="fpga_vdf_discriminant/fast">
+         <Option output="/tmp/tmp.zjHDLLHpAj/cmake-build-debug/fpga_vdf_discriminant" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include" />
+            <Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/app_sync" />
+            <Add directory="/home/mjhatamy/Applications/Xilinx/Vitis_HLS/2021.1/include/etc" />
+            <Add directory="/tmp/tmp.zjHDLLHpAj" />
+            <Add directory="/tmp/tmp.zjHDLLHpAj/cmake-build-debug" />
+            <Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9" />
+            <Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward" />
+            <Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include" />
+            <Add directory="/usr/lib/llvm-11/lib/clang/11.0.0/include" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 fpga_vdf_discriminant/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.zjHDLLHpAj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/Utils.cpp">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/Utils.h">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/VDFTypes.cpp">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/VDFTypes.h">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant-tb.cpp">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant.cpp">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/fpga_vdf_discriminant.h">
+         <Option target="fpga_vdf_discriminant"/>
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/tmp/tmp.zjHDLLHpAj/cmake/FindGMP.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+   </Project>
 </CodeBlocks_project_file>
