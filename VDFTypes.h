@@ -83,7 +83,6 @@ namespace FpgaVdf {
             SUM_VALUE_TYPE carryX[SIZE] = { 0, 0, 0, 0 };
             for (int i = 0; i < SIZE; i++) {
                 for (int j = 0; j < SIZE; j++) {
-                    //carry[i][j] = (lVal.val[j] * rVal.val[i]) ;//+ carryX;
                     MUL_VALUE_TYPE res = lVal.val[j] * rVal.val[i];
                     if(j > 0) {
                         res += carryX[i];
