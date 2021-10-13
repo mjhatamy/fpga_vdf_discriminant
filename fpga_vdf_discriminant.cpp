@@ -6,9 +6,18 @@
 
 using namespace FpgaVdf;
 
-void fpga_vdf_discriminant(DATA_TYPE inData[DATA_ARRAY_LEN], DATA_TYPE outData[DATA_ARRAY_LEN]) {
+void fpga_vdf_discriminant(FpgaVdfIntArray *inData, FpgaVdfIntArray &outData) {
 
-    DATA_TYPE sum[DATA_ARRAY_LEN];
-    Utils::sum(sum, inData, inData);
-    Utils::assign(sum, outData);
+    Form f;
+    f.d = *inData;
+
+    //std::cout << "D: " << f.d.to_string(AP_HEX) << std::endl;
+    //FpgaVdfIntArray::add(f.a, f.d, *inData);
+    FpgaVdfIntArray::mul(f.a, f.d, *inData);
+
+    //std::cout << "A: " << f.a.to_string(AP_HEX) << std::endl;
+    //DATA_TYPE sum[DATA_ARRAY_LEN];
+    //Utils::sum(sum, inData, inData);
+    //Utils::assign(sum, outData);
+    outData = f.a;
 }

@@ -8,7 +8,15 @@
 #include "VDFTypes.h"
 #include "Utils.h"
 
+typedef struct  {
+    FpgaVdf::FpgaVdfIntArray a;
+    FpgaVdf::FpgaVdfIntArray b;
+    FpgaVdf::FpgaVdfIntArray c;
+    FpgaVdf::FpgaVdfIntArray d;
 
-void fpga_vdf_discriminant(FpgaVdf::DATA_TYPE inData[DATA_ARRAY_LEN], FpgaVdf::DATA_TYPE outData[DATA_ARRAY_LEN]);
+    FpgaVdf::FpgaVdfIntArray denom;
+} Form;
+
+void fpga_vdf_discriminant(FpgaVdf::FpgaVdfIntArray *inData, FpgaVdf::FpgaVdfIntArray &outData);
 
 #endif //FPGA_VDF_DISCRIMINANT_FPGA_VDF_DISCRIMINANT_H

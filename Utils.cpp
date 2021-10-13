@@ -124,16 +124,6 @@ namespace FpgaVdf {
             }
            // sumValidateByGMP(i, &sumResult[i], &lVal[i], &rVal[i], carry);
 #endif
-//
-//            const std::string lVarBinString = lVal[i].to_string(AP_BIN);
-//            const std::string lVarHexString = lVal[i].to_string(AP_HEX);
-//
-//            std::string sumBinString = sum.to_string(AP_BIN);
-//            std::string sumHexString = sum.to_string(AP_HEX);
-
-//            std::cout << "Sum " << i << std::endl << "Hex: " << sum.to_string(AP_HEX) << std::endl
-//                      << "BIN: " << sum.to_string(AP_BIN) << std::endl;
-//            std::cout << "Carry[" << i << "]: Hex: " << carry.to_string(AP_HEX) << " - BIN: " << carry.to_string(AP_BIN) << std::endl;
         }
 
 
