@@ -29,13 +29,16 @@ int main() {
         }
         std::cout << std::endl;
 
+        mpz_fdiv_q_ui(hashMz2, hashMz, 2);// -0xFFFFFFFFFFFFFFFF );
+        gmp_printf("\nhashMZ: %#Zx\n", hashMz2);
+
         FpgaVdfIntArray outData = { 0,0,0,0};
         std::cout << outData.to_string(AP_HEX) << std::endl;
         fpga_vdf_discriminant(&inData, outData);
 
         //FpgaVdfIntArray::validateAdd(inData, inData, outData);
 
-        mpz_add(hashMz, hashMz, hashMz2);// -0xFFFFFFFFFFFFFFFF );
+
     }
 
     mpz_clears(hashMz, hashMz2, NULL);

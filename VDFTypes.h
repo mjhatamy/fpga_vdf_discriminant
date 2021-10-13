@@ -20,7 +20,7 @@ namespace FpgaVdf {
 
     template<int LEN, int SIZE>
     struct FpgaVdfIntType {
-        typedef ap_int<DATA_LEN> VALUE_TYPE;
+        typedef ap_int<LEN> VALUE_TYPE;
         typedef ap_int<LEN + 1> SUM_VALUE_TYPE;
         typedef ap_int<(LEN * 2) - 1> MUL_VALUE_TYPE;
         typedef ap_int<LEN> BaseApInt;
@@ -56,6 +56,18 @@ namespace FpgaVdf {
             return (*this);
         }
 
+        FpgaVdfIntType &operator=(VALUE_TYPE &value) {
+            for (int i = 0; i < SIZE; i++) {
+                this->val[i] = value[i];
+            }
+            return (*this);
+        }
+
+        FpgaVdfIntType &operator=(int value) {
+            this->val[0] = value;
+            return (*this);
+        }
+
         FpgaVdfIntType &operator+=(FpgaVdfIntType rVal) {
             ap_int<2> carry = 0;
             for (int i = 0; i < SIZE; i++) {
@@ -76,6 +88,63 @@ namespace FpgaVdf {
         ap_int<LEN> &operator[](int index) {
             return this->val[index];
         }
+
+        static void
+        div(FpgaVdfIntType<LEN, SIZE> &dst, FpgaVdfIntType<LEN, SIZE> &lVal, FpgaVdfIntType<LEN, SIZE> &rVal) {
+            VALUE_TYPE carry[SIZE][SIZE] = { 0, 0, 0, 0 };
+            for (int i = 0; i < SIZE; i++) {
+                for(int j=0; j < SIZE; j++) {
+                    if(rVal[j] == 0) {
+                        carry[i][j] = 0;
+                        continue;
+                    }
+                    carry[i][j] = (lVal.val[i] / rVal.val[j] ) ;
+                }
+            }
+            dst[0] = carry[0][0];
+            dst[1] = carry[1][0];
+            dst[2] = carry[2][0];
+            dst[3] = carry[3][0];
+            std::cout << carry[0][0].to_string(AP_HEX) << std::endl;
+            std::cout << carry[0][1].to_string(AP_HEX) << std::endl;
+            std::cout << carry[1][0].to_string(AP_HEX) << std::endl;
+            std::cout << carry[1][1].to_string(AP_HEX) << std::endl;
+            std::cout << carry[2][0].to_string(AP_HEX) << std::endl;
+            std::cout << carry[2][1].to_string(AP_HEX) << std::endl;
+
+            std::cout << dst.to_string(AP_HEX) << std::endl;
+            std::cout << std::hex << -(-0xF457 / 2) << std::endl;
+#ifndef __SYNTHESIS__
+            validateDiv(lVal, rVal, dst);
+#endif
+        }
+#ifndef __SYNTHESIS__
+
+        static void validateDiv(FpgaVdfIntType<LEN, SIZE> &lVal, FpgaVdfIntType<LEN, SIZE> &rVal,
+                                FpgaVdfIntType<LEN, SIZE> &fpgaResult) {
+            mpz_t glVal, grVal, gRes, gFpgaSumResult;
+            mpz_inits(glVal, grVal, gRes, gFpgaSumResult, NULL);
+
+            mpz_set_str(gFpgaSumResult, fpgaResult.to_string(AP_HEX).c_str(), 0);
+
+            // Calculate by GMP
+            mpz_set_str(glVal, lVal.to_string(AP_HEX, true).c_str(), 0);
+            mpz_set_str(grVal, rVal.to_string(AP_HEX, true).c_str(), 0);
+            mpz_fdiv_q(gRes, glVal, grVal);
+
+            if (mpz_cmp(gRes, gFpgaSumResult) != 0) {
+                gmp_printf("DIV Expected Result==>\nHEX: %#Zx\nFPGAResult=>\nHex: %#Zx\n\n", gRes, gFpgaSumResult);
+                gmp_printf("glVal: %#Zx\ngrVal: %#Zx\n\n", glVal, grVal);
+                //std::cout << "FPGA Result Printed" << std::endl << fpgaResult.to_string(AP_HEX) << std::endl;
+                mpz_clears(glVal, grVal, gRes, gFpgaSumResult, NULL);
+                throw std::out_of_range("Sum result is not equal results from GMP Library.");
+            } else {
+                std::cout << "MUL Validated by GMP" << std::endl;
+            }
+            mpz_clears(glVal, grVal, gRes, gFpgaSumResult, NULL);
+        }
+
+#endif
 
         static void
         mul(FpgaVdfIntType<LEN, SIZE> &dst, FpgaVdfIntType<LEN, SIZE> &lVal, FpgaVdfIntType<LEN, SIZE> &rVal) {
@@ -109,26 +178,26 @@ namespace FpgaVdf {
 
         static void validateMul(FpgaVdfIntType<LEN, SIZE> &lVal, FpgaVdfIntType<LEN, SIZE> &rVal,
                                 FpgaVdfIntType<LEN, SIZE> &fpgaResult) {
-            mpz_t glVal, grVal, gSumVal, gFpgaSumResult;
-            mpz_inits(glVal, grVal, gSumVal, gFpgaSumResult, NULL);
+            mpz_t glVal, grVal, gRes, gFpgaSumResult;
+            mpz_inits(glVal, grVal, gRes, gFpgaSumResult, NULL);
 
             mpz_set_str(gFpgaSumResult, fpgaResult.to_string(AP_HEX).c_str(), 0);
 
             // Calculate by GMP
             mpz_set_str(glVal, lVal.to_string(AP_HEX, true).c_str(), 0);
             mpz_set_str(grVal, rVal.to_string(AP_HEX, true).c_str(), 0);
-            mpz_mul(gSumVal, glVal, grVal);
+            mpz_mul(gRes, glVal, grVal);
 
-            if (mpz_cmp(gSumVal, gFpgaSumResult) != 0) {
-                gmp_printf("Expected Result==>\nHEX: %#Zx\nFPGAResult=>\nHex: %#Zx\n\n", gSumVal, gFpgaSumResult);
+            if (mpz_cmp(gRes, gFpgaSumResult) != 0) {
+                gmp_printf("Expected Result==>\nHEX: %#Zx\nFPGAResult=>\nHex: %#Zx\n\n", gRes, gFpgaSumResult);
                 gmp_printf("glVal: %#Zx\ngrVal: %#Zx\n\n", glVal, grVal);
                 //std::cout << "FPGA Result Printed" << std::endl << fpgaResult.to_string(AP_HEX) << std::endl;
-                mpz_clears(glVal, grVal, gSumVal, gFpgaSumResult, NULL);
+                mpz_clears(glVal, grVal, gRes, gFpgaSumResult, NULL);
                 throw std::out_of_range("Sum result is not equal results from GMP Library.");
             } else {
                 std::cout << "MUL Validated by GMP" << std::endl;
             }
-            mpz_clears(glVal, grVal, gSumVal, gFpgaSumResult, NULL);
+            mpz_clears(glVal, grVal, gRes, gFpgaSumResult, NULL);
         }
 
 #endif
